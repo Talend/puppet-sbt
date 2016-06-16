@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Talend/puppet-sbt.svg?branch=master)](https://travis-ci.org/Talend/puppet-sbt)
+
 # talend-sbt
 
 A puppet module for installing and configuring [Scala Build Tool](http://www.scala-sbt.org). SBT is an open source build tool for Scala and Java projects.

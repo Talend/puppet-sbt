@@ -1,0 +1,43 @@
+{
+  "name": "talend-sbt",
+  "version": "0.1.0",
+  "author": "Talend",
+  "summary": "Module managing scala build tool",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Talend/puppet-sbt",
+  "project_page": "https://github.com/Talend/puppet-sbt",
+  "issues_url": "https://github.com/Talend/puppet-sbt",
+  "description": "sbt is an open source build tool for Scala and Java projects",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 2.4.0 < 5.0.0"
+    },
+    {
+      "name": "maestrodev-wget",
+      "version_requirement": ">= 1.7.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ]
+}

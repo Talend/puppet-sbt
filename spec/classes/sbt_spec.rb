@@ -7,6 +7,7 @@ describe 'sbt', :type => :class do
       :kernel          => 'Linux',
       :operatingsystem => 'CentOS',
       :osfamily        => 'RedHat',
+      :sbt_java_opts   => '-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M'
     }
     end
 

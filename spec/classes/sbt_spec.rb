@@ -47,6 +47,7 @@ describe 'sbt', :type => :class do
     let(:facts) do
     {
       :osfamily => 'default',
+      :operatingsystem => 'default',
     }
     end
     let(:params) do
@@ -63,6 +64,9 @@ describe 'sbt', :type => :class do
       :kernel          => 'Linux',
       :operatingsystem => 'CentOS',
       :osfamily        => 'RedHat',
+      :http_proxy      => 'default',
+      :https_proxy     => 'default',
+      :schedule        => 'default',
     }
     end
     let(:params) do

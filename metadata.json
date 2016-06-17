@@ -1,7 +1,7 @@
 {
   "name": "talend-sbt",
-  "version": "0.1.0",
-  "author": "Talend",
+  "version": "0.1.1",
+  "author": "talend",
   "summary": "Module managing scala build tool",
   "license": "Apache-2.0",
   "source": "https://github.com/Talend/puppet-sbt",

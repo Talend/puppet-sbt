@@ -21,6 +21,38 @@
 # [*sbt_java_opts*]
 #   String.  The Java options used when launching a sbt build
 #   Default: -Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M
+#
+# [*publish_configure_credentials*]
+#   Boolean. Whether to set the configuration for remote publishing
+#   Default: false
+#
+# [*publish_credentials_folder*]
+#   String. The directory in which to place the credentials file used for publishing
+#   Default: /var/.ivy2/
+#
+# [*publish_credentials_file*]
+#   String. The name of the file containing the credentials used for publishing
+#   Default: .credentials
+#
+# [*publish_credentials_file_owner*]
+#   String. The owner of the crendentials file
+#   Default: undef
+#
+# [*publish_realm*]
+#   String. The realm of the artifacts repository
+#   Default: undef
+#
+# [*publish_host*]
+#   String. The artifacts repository host
+#   Default: undef
+#
+# [*publish_user*]
+#   String. Username for publishing into the artifacts repository
+#   Default: undef
+#
+# [*publish_password*]
+#   String. Password for publishing into the artifacts repository
+#   Default: undef
 
 class sbt(
     $install_as_package             = $sbt::params::install_as_package,

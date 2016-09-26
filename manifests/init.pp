@@ -40,7 +40,6 @@ class sbt(
   validate_bool($install_as_package)
   validate_string($sbt_java_opts)
   validate_string($sbt_jar_version)
-  validate_string($sbt_destination_path)
 
   if $install_as_package {
     class { '::sbt::install_package': }

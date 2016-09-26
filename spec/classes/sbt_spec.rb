@@ -135,4 +135,22 @@ describe 'sbt', :type => :class do
       )
     end
   end
+  context 'configured_publishing_credentials' do
+    let(:facts) do
+    {
+      :kernel          => 'Linux',
+      :operatingsystem => 'CentOS',
+      :osfamily        => 'RedHat',
+      :http_proxy      => 'default',
+      :https_proxy     => 'default',
+      :schedule        => 'default',
+    }
+    end
+    let(:params) do
+    {
+      :publish_configure_credentials => false
+    }
+    end
+    it { should_not contain_class('sbt::publish') }
+  end
 end

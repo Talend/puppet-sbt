@@ -40,6 +40,16 @@ class sbt(
   validate_bool($install_as_package)
   validate_string($sbt_java_opts)
   validate_string($sbt_jar_version)
+  validate_string($sbt_jar_path)
+  validate_bool($publish_configure_credentials)
+  validate_string($publish_credentials_folder)
+  validate_string($publish_credentials_file)
+  validate_string($publish_credentials_file_owner)
+  validate_string($publish_realm)
+  validate_string(publish_host)
+  validate_string($publish_user)
+  validate_string($sbt_jar_path)
+  validate_string($publish_password)
 
   if $install_as_package {
     class { '::sbt::install_package': }

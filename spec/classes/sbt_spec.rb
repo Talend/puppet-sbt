@@ -98,4 +98,41 @@ describe 'sbt', :type => :class do
       )
     end
   end
+
+  context 'configured_publishing_credentials' do
+    let(:facts) do
+    {
+      :kernel          => 'Linux',
+      :operatingsystem => 'CentOS',
+      :osfamily        => 'RedHat',
+      :http_proxy      => 'default',
+      :https_proxy     => 'default',
+      :schedule        => 'default',
+    }
+    end
+    let(:params) do
+    {
+      :publish_configure_credentials => true
+    }
+    end
+    it { should compile }
+    it { should contain_class('sbt::publish') }
+    it { should contain_class('sbt::publish').with_publish_credentials_file_path('/home/user/.ivy2') }
+    #it { should contain_class('sbt::publish').with_publish_credentials_folder('/home/user/.ivy2') }    
+    it { should contain_class('sbt::publish').with_publish_credentials_file('.credentials') }
+    it { should contain_class('sbt::publish').with_publish_credentials_file_owner('root') }
+    it { should contain_class('sbt::publish').with_publish_realm('myrealm') }
+    it { should contain_class('sbt::publish').with_publish_host('nexus_host') }
+    it { should contain_class('sbt::publish').with_publish_user('nexus_username') }
+    it { should contain_class('sbt::publish').with_publish_password('nexus_password') }
+    it do
+      should contain_file('/home/user/.ivy2/.credentials').with(
+        :ensure  => 'present',
+        :content => "realm=myrealm\nhost=nexus_host\nuser=nexus_username\npassword=nexus_password",
+        :owner   => 'root',
+        :group   => 'root',
+        :mode    => '0600'
+      )
+    end
+  end
 end

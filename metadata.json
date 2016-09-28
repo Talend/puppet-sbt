@@ -1,6 +1,6 @@
 {
   "name": "talend-sbt",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "talend",
   "summary": "Module managing scala build tool",
   "license": "Apache-2.0",

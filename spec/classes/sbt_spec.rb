@@ -118,7 +118,6 @@ describe 'sbt', :type => :class do
     it { should compile }
     it { should contain_class('sbt::publish') }
     it { should contain_class('sbt::publish').with_publish_credentials_file_path('/home/user/.ivy2') }
-    #it { should contain_class('sbt::publish').with_publish_credentials_folder('/home/user/.ivy2') }    
     it { should contain_class('sbt::publish').with_publish_credentials_file('.credentials') }
     it { should contain_class('sbt::publish').with_publish_credentials_file_owner('root') }
     it { should contain_class('sbt::publish').with_publish_realm('myrealm') }
@@ -151,6 +150,7 @@ describe 'sbt', :type => :class do
       :publish_configure_credentials => false
     }
     end
-    it { should_not contain_class('sbt::publish') }
+    it { should compile }
+    it { should_not contain_class('sbt::publish') }    
   end
 end
